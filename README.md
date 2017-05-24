@@ -1,6 +1,8 @@
 # aaOceanC4D
 
-aaOcean Shader and Deformer by Amaan Akram for Cinema 4D, ported by
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
+aaOcean Shader and Deformer by Amaan Akram, ported to Cinema 4D by
 Niklas Rosenstein.
 
 ## Build Instructions
