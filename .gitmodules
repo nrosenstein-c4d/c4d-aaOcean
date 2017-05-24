@@ -1,0 +1,6 @@
+[submodule "craftr/modules/maxon.c4d"]
+	path = craftr/modules/maxon.c4d
+	url = https://github.com/craftr-build/NiklasRosenstein.maxon.c4d.git
+[submodule "_vendor/aaocean"]
+	path = _vendor/aaocean
+	url = git@github.com:NiklasRosenstein/aaOcean-mirror.git

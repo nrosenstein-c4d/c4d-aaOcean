@@ -1,0 +1,49 @@
+ResourcePackage(aaOceanC4D)
+DaaOceanC4D: 1039330
+  us: aaOcean
+
+SetPrefix(AAOCEANC4D_)
+RESOLUTION: 1000
+  us: Resolution
+SPECTRUM: 1001
+  us: Spectrum
+SEED: 1002
+  us: Seed
+OCEANSCALE: 1003
+  us: Ocean Scale
+OCEANDEPTH: 1004
+  us: Ocean Depth
+SURFACETENSION: 1005
+  us: Surface Tension
+VELOCITY: 1006
+  us: Velocity
+CUTOFF: 1007
+  us: Wave Smooth (Cutoff)
+WINDDIRECTION: 1008
+  us: Wind Direction
+WINDALIGN: 1009
+  us: Wind Alignment
+DAMP: 1010
+  us: Wave Reflection (Damp)
+WAVESPEED: 1011
+  us: Wave Speed
+WAVEHEIGHT: 1012
+  us: Wave Height
+CHOPAMOUNT: 1013
+  us: Chop Amount
+TIME: 1014
+  us: Time
+REPEATTIME: 1015
+  us: Repeat Time
+FOAM: 1016
+  us: Foam
+RANDWEIGHT: 1017
+  us: Random Weight
+SPECTRUMWEIGHT: 1018
+  us: Spectrum Multiplier
+PMWAVESIZE: 1019
+  us: Peak Sharpening
+JSWPFETCH: 1020
+  us: JSWP Fetch
+SWELL: 1021
+  us: Swell
