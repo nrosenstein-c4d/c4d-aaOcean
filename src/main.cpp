@@ -23,6 +23,7 @@ extern Bool RegisterAaOceanDeformer();
 extern Bool RegisterAaOceanShader();
 
 Bool PluginStart() {
+  GePrint("aaOcean by Amaan Akram -- Ported to C4D by Niklas Rosenstein");
   RegisterAaOceanDescription();
   RegisterAaOceanDeformer();
   RegisterAaOceanShader();
