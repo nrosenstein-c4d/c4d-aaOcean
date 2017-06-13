@@ -5,6 +5,8 @@
 aaOcean Shader and Deformer by Amaan Akram, ported to Cinema 4D by
 Niklas Rosenstein.
 
+![](screenshot.png)
+
 ## Installation
 
   [Releases]: https://github.com/NiklasRosenstein/c4d-aaOcean/releases
