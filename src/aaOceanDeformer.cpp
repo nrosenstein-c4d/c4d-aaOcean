@@ -56,8 +56,8 @@ public: // ObjectData overrides
     _lastTime = doc->GetTime();
     _ocean.Init(*bc, _lastTime.Get());
 
-    bool foam = bc->GetBool(AAOCEANC4D_FOAM);
-    bool invert = false;  // TODO: Add parameter
+    //bool foam = bc->GetBool(AAOCEANC4D_FOAM);
+    //bool invert = false;  // TODO: Add parameter
     auto uvwHandle = uvwTag->GetDataAddressR();
     auto const transform = mod->GetMg();
 
@@ -114,7 +114,6 @@ public:
 
 Bool RegisterAaOceanDeformer()
 {
-  BaseBitmap* icon = nullptr;  // FIXME: load icon
   return RegisterObjectPlugin(OaaOceanDeformer, "aaOceanDeformer", OBJECT_MODIFIER,
-    aaOceanDeformer::Alloc, "OaaOceanDeformer", icon, 0);
+    aaOceanDeformer::Alloc, "OaaOceanDeformer", AutoBitmap("aaoceandeformer.png"), 0);
 }
