@@ -1,4 +1,5 @@
 CONTAINER XaaOceanShader {
+  INCLUDE Mpreview;
   INCLUDE Xbase;
   INCLUDE aaOceanC4D;
 
