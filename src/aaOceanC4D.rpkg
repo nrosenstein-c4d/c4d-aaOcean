@@ -47,3 +47,5 @@ JSWPFETCH: 1020
   us: JSWP Fetch
 SWELL: 1021
   us: Swell
+INFOTEXT: 1022
+  us: Copyright © 2009-2015 Amaan Akram; Copyright © 2017 Niklas Rosenstein
