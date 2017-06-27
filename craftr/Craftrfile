@@ -27,6 +27,7 @@ pluginObj = cxx.compile_cpp(
   frameworks = [c4d.sdk],
   msvc_additional_flags = ['-openmp']
 )
+
 plugin = cxx.shared_library(
   inputs = [aaOceanObj, pluginObj],
   output = local('aaOceanC4D')

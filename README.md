@@ -23,6 +23,11 @@ aaOcean Shader and Deformer by [Amaan Akram][0], ported to Cinema 4D by
 * `>_ craftr export`
 * `>_ craftr build`
 
+## Todolist/Ideas
+
+* [ ] Shader/Deformer with on-demand wave sampling (no texture precomputation)
+* [ ] OpenMP support on OSX (need to comment out `#include <omp.h>` in aaOceanClass.cpp)
+
 ## Honorable Mentions
 
 * Amaan Akram for the [aaOcean Suite] and its source code
