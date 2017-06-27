@@ -30,5 +30,5 @@ pluginObj = cxx.compile_cpp(
 
 plugin = cxx.shared_library(
   inputs = [aaOceanObj, pluginObj],
-  output = local('aaOceanC4D')
+  output = local('aaOceanC4D-r{}'.format(c4d.release))
 )
