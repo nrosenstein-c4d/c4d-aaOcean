@@ -9,6 +9,21 @@ aaOcean Shader and Deformer by [Amaan Akram][0], ported to Cinema 4D by
 
 ![](screenshot.png)
 
+## Examples
+
+*by Serge Mustu*
+
+<table>
+  <tr>
+    <td><img src="example/render-01.jpg"></td>
+    <td><img src="example/render-02.jpg"></td>
+  </tr>
+  <tr>
+    <td><img src="example/render-03.jpg"></td>
+    <td><img src="example/render-04.jpg"></td>
+  </tr>
+</table>
+
 ## Installation
 
 * Download a build from the [Releases] page that matches your OS
