@@ -17,6 +17,7 @@
  */
 
 #include <c4d.h>
+#include <c4d_apibridge.h>
 #include <description/OaaOceanDeformer.h>
 #include "aaOceanC4D.h"
 #include "utils.h"
@@ -114,6 +115,12 @@ public:
 
 Bool RegisterAaOceanDeformer()
 {
-  return RegisterObjectPlugin(OaaOceanDeformer, "aaOceanDeformer", OBJECT_MODIFIER,
-    aaOceanDeformer::Alloc, "OaaOceanDeformer", AutoBitmap("aaoceandeformer.png"), 0);
+  return RegisterObjectPlugin(
+    OaaOceanDeformer,
+    "aaOceanDeformer"_s,
+    OBJECT_MODIFIER,
+    aaOceanDeformer::Alloc,
+    "OaaOceanDeformer"_s,
+    AutoBitmap("aaoceandeformer.png"_s),
+    0);
 }

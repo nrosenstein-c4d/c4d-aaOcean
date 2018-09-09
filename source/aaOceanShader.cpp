@@ -17,6 +17,7 @@
  */
 
 #include <c4d.h>
+#include <c4d_apibridge.h>
 #include <description/XaaOceanShader.h>
 #include "aaOceanC4D.h"
 #include "utils.h"
@@ -82,5 +83,11 @@ public:
 
 Bool RegisterAaOceanShader() {
   Int32 const info = 0;
-  return RegisterShaderPlugin(XaaOceanShader, "aaOceanShader", info, aaOceanShader::Alloc, "XaaOceanShader", 0);
+  return RegisterShaderPlugin(
+    XaaOceanShader,
+    "aaOceanShader"_s,
+    info,
+    aaOceanShader::Alloc,
+    "XaaOceanShader"_s,
+    0);
 }

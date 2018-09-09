@@ -17,6 +17,7 @@
  */
 
 #include <c4d.h>
+#include <c4d_apibridge.h>
 #include "aaOceanC4D.h"
 
 extern Bool RegisterAaOceanDeformer();
@@ -33,7 +34,7 @@ Bool PluginStart() {
 Bool PluginMessage(Int32 msg, void* pdata) {
   switch (msg) {
     case C4DPL_INIT_SYS:
-      return ::resource.Init();
+      return c4d_apibridge::GlobalResource().Init();
   }
   return true;
 }

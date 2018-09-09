@@ -1,9 +1,0 @@
-name: "c4d.nr.aaOceanPort"
-version: "1.0.0"
-project_dir: ".."
-author: ""
-url: ""
-dependencies:
-  "craftr.lang.cxx": "*"
-  "NiklasRosenstein.maxon.c4d": "*"
-options: {}

@@ -1,5 +1,11 @@
 build/
+generated/
+project/*
+!project/projectdefinition.txt
 *.cdl64
 *.exp
 *.lib
 *.dylib
+*.xlib
+*.profraw
+.DS_Store

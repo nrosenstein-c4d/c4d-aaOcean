@@ -1,0 +1,5 @@
+ModuleId=com.niklasrosenstein.c4d-aaOcean
+Platform=Win64;OSX
+Type=DLL
+stylecheck=false
+APIS=cinema.framework

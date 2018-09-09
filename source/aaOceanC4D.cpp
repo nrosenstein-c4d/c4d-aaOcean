@@ -18,6 +18,7 @@
 
 #include "aaOceanC4D.h"
 #include <aaOceanClass.cpp>
+#include <c4d_apibridge.h>
 
 aaOceanC4D::aaOceanC4D()
 {
@@ -74,7 +75,6 @@ Bool aaOceanC4D::IsChoppy() {
   return _oc->isChoppy();
 }
 
-
 Bool RegisterAaOceanDescription() {
-  return RegisterDescription(DaaOceanC4D, "aaOceanC4D");
+  return RegisterDescription(DaaOceanC4D, "aaOceanC4D"_s);
 }

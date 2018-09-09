@@ -54,3 +54,9 @@ aaOcean Shader and Deformer by [Amaan Akram][0], ported to Cinema 4D by
 [0]: http://www.amaanakram.com/
 [1]: http://www.psd.de/
 [2]: http://niklasrosenstein.com/
+
+## Changelog
+
+### v1.0.1
+
+- R20 Update
