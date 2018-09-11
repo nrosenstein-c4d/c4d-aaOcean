@@ -7,5 +7,6 @@ project/*
 *.lib
 *.dylib
 *.xlib
+*.xdl64
 *.profraw
 .DS_Store
