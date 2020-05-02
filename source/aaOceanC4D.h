@@ -1,6 +1,7 @@
 /**
  * Port of Amaan Akram's aaOcean suite for Cinema 4D.
  * Copyright (C) 2017  Niklas Rosenstein
+ * Copyright (C) 2020  Kent Barber
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,8 +18,7 @@
  */
 
 #pragma once
-#include <c4d.h>
-#include <description/aaOceanC4D.h>
+#include "c4d.h"
 
 class aaOcean;
 

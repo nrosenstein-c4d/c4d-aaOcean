@@ -5,7 +5,9 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 aaOcean Shader and Deformer by [Amaan Akram][0], ported to Cinema 4D by
-[Niklas Rosenstein][2].
+[Niklas Rosenstein][2]. 
+
+Updated to the latest SDK for R20, R21 and S22 by [Kent Barber from Plugins 4D][3]
 
 ![](screenshot.png)
 
@@ -24,20 +26,6 @@ aaOcean Shader and Deformer by [Amaan Akram][0], ported to Cinema 4D by
   </tr>
 </table>
 
-## Installation
-
-* Download a build from the [Releases] page that matches your OS
-  and Cinema 4D version
-* Unpack the downloaded ZIP archive into your Cinema 4D plugins directory
-
-## Build Instructions
-
-* Install [Craftr]
-* Clone the repository in the Cinema 4D application plugins directory
-* On OSX: `$ brew install libomp`
-* `$ git submodules update --init`
-* `$ craftr -cb --variant=release`
-
 ## Todolist/Ideas
 
 * [ ] Shader/Deformer with on-demand wave sampling (no texture precomputation)
@@ -46,15 +34,22 @@ aaOcean Shader and Deformer by [Amaan Akram][0], ported to Cinema 4D by
 
 * Amaan Akram for the [aaOcean Suite] and its source code
 * Sponsor for initial port [Partner Ship Design GmbH][1]
+* Previous [R20 Releases] by Nicklas Rosenstein.
 
-[Releases]: https://github.com/NiklasRosenstein/c4d-aaOcean/releases
-[Craftr]: https://craftr.net
+[R20 Releases]: https://github.com/NiklasRosenstein/c4d-aaOcean/releases
 [aaOcean Suite]: http://www.amaanakram.com/plugins-shaders/aaocean-suite/
 [0]: http://www.amaanakram.com/
 [1]: http://www.psd.de/
 [2]: http://niklasrosenstein.com/
+[3]: https://www.plugins4d.com/
 
 ## Changelog
+
+### v1.0.2
+- Removed the api bridge code
+- Removed the craftr build system requirement
+- Updated to the new SDK frameworks for R20 onwards
+- Updated to add support for R21 and S22
 
 ### v1.0.1
 

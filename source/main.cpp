@@ -1,6 +1,7 @@
 /**
  * Port of Amaan Akram's aaOcean suite for Cinema 4D.
  * Copyright (C) 2017  Niklas Rosenstein
+ * Copyright (C) 2020  Kent Barber
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,15 +17,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <c4d.h>
-#include <c4d_apibridge.h>
+#include "c4d.h"
 #include "aaOceanC4D.h"
 
 extern Bool RegisterAaOceanDeformer();
 extern Bool RegisterAaOceanShader();
 
 Bool PluginStart() {
-  GePrint("aaOcean by Amaan Akram -- Ported to C4D by Niklas Rosenstein");
+  GeConsoleOut("aaOcean by Amaan Akram -- Ported to C4D by Niklas Rosenstein. Converted to R21+ by Kent Barber."_s);
   RegisterAaOceanDescription();
   RegisterAaOceanDeformer();
   RegisterAaOceanShader();
@@ -34,7 +34,8 @@ Bool PluginStart() {
 Bool PluginMessage(Int32 msg, void* pdata) {
   switch (msg) {
     case C4DPL_INIT_SYS:
-      return c4d_apibridge::GlobalResource().Init();
+          if (!g_resource.Init()) return false; // don't start plugin without resource
+          return true;
   }
   return true;
 }

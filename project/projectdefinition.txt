@@ -1,5 +1,42 @@
-ModuleId=com.niklasrosenstein.c4d-aaOcean
+// Supported platforms - can be [Win64;OSX]
 Platform=Win64;OSX
+
+// Type of project - can be [Lib;DLL;App]
 Type=DLL
+
+// API dependencies
+APIS=cinema.framework;mesh_misc.framework;math.framework;crypt.framework;python.framework;core.framework;image.framework;network.framework;
+
+// C4D component
+C4D=true
+
 stylecheck=false
-APIS=cinema.framework
+            
+// Windows
+AdditionalIncludeDirectories.Win64=../../_vendor/aaocean/externals/aaOcean/src;\
+				   ../../_vendor/aaocean/externals/aaOcean/helpers;\
+				   ../../_vendor/aaocean/externals/helpers/dSFMT;
+
+Exclude.Win=_vendor/aaocean/Plugins;\
+	    _vendor/aaocean/Shaders;\
+	    _vendor/aaocean/Terminal;\
+	    _vendor/aaocean/externals/helpers/dSFMT/dSFMT.c;\
+  	    _vendor/aaocean/externals/helpers/kissfft/kiss_fft.c;\
+    	    _vendor/aaocean/externals/helpers/kissfft/tools/kiss_fftnd.c;\
+	    _vendor/aaocean/externals/aaOcean/src/aaOceanClass.cpp;
+
+// OS X 
+USER_HEADER_SEARCH_PATHS=../../_vendor/aaocean/externals;\
+			 ../../_vendor/aaocean/externals/helpers;\
+			 ../../_vendor/aaocean/externals/helpers/dSFMT;
+
+Exclude.OSX=_vendor/aaocean/Plugins;\
+	    _vendor/aaocean/Shaders;\
+	    _vendor/aaocean/Terminal;\
+	    _vendor/aaocean/externals/helpers/dSFMT/dSFMT.c;\
+  	    _vendor/aaocean/externals/helpers/kissfft/kiss_fft.c;\
+    	    _vendor/aaocean/externals/helpers/kissfft/tools/kiss_fftnd.c;\
+	    _vendor/aaocean/externals/aaOcean/src/aaOceanClass.cpp;
+
+// Custom ID
+ModuleId=com.gamelogicdesign.aaocean

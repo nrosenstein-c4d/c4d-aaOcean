@@ -17,12 +17,13 @@
  */
 
 #include "aaOceanC4D.h"
-#include <aaOceanClass.cpp>
-#include <c4d_apibridge.h>
+#include "aaOceanClass.cpp"
+#include "DaaOceanC4D.h"
 
 aaOceanC4D::aaOceanC4D()
+: _oc(nullptr)
 {
-  _oc = NewObjClear(aaOcean);
+
 }
 
 aaOceanC4D::~aaOceanC4D() {
@@ -31,7 +32,15 @@ aaOceanC4D::~aaOceanC4D() {
 
 Bool aaOceanC4D::Init(BaseContainer const& bc, Float time)
 {
-  if (!_oc) return false;
+    if (!_oc)
+    {
+        _oc = NewObjClear(aaOcean);
+        if (!_oc)
+        {
+            return false;
+        }
+    }
+    
   _oc->input(
     bc.GetInt32(AAOCEANC4D_RESOLUTION),
     bc.GetInt32(AAOCEANC4D_SPECTRUM),
@@ -41,7 +50,7 @@ Bool aaOceanC4D::Init(BaseContainer const& bc, Float time)
     bc.GetFloat(AAOCEANC4D_SURFACETENSION),
     bc.GetFloat(AAOCEANC4D_VELOCITY),
     bc.GetFloat(AAOCEANC4D_CUTOFF),
-    Deg(bc.GetFloat(AAOCEANC4D_WINDDIRECTION)),
+    RadToDeg(bc.GetFloat(AAOCEANC4D_WINDDIRECTION)),
     bc.GetInt32(AAOCEANC4D_WINDALIGN),
     bc.GetFloat(AAOCEANC4D_DAMP),
     bc.GetFloat(AAOCEANC4D_WAVESPEED),
@@ -76,5 +85,5 @@ Bool aaOceanC4D::IsChoppy() {
 }
 
 Bool RegisterAaOceanDescription() {
-  return RegisterDescription(DaaOceanC4D, "aaOceanC4D"_s);
+  return RegisterDescription(DaaOceanC4D_Group, "DaaOceanC4D"_s);
 }

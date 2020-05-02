@@ -1,6 +1,4 @@
 [submodule "_vendor/aaocean"]
 	path = _vendor/aaocean
-	url = git@github.com:NiklasRosenstein/mirror-aaOcean.git
-[submodule "craftr/net.maxon.c4d"]
-	path = craftr/net.maxon.c4d
-	url = git@github.com:craftr-build/net.maxon.c4d.git
+	url = git@github.com:kentbarber/mirror-aaOcean.git
+

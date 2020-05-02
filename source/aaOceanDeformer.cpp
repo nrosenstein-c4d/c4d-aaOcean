@@ -1,6 +1,7 @@
 /**
  * Port of Amaan Akram's aaOcean suite for Cinema 4D.
  * Copyright (C) 2017  Niklas Rosenstein
+ * Copyright (C) 2020  Kent Barber
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,9 +17,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <c4d.h>
-#include <c4d_apibridge.h>
-#include <description/OaaOceanDeformer.h>
+#include "c4d.h"
+#include "OaaOceanDeformer.h"
 #include "aaOceanC4D.h"
 #include "utils.h"
 
@@ -33,7 +33,7 @@ public: // ObjectData overrides
   void CheckDirty(BaseObject* op, BaseDocument* doc) override
   {
     if (_lastTime != doc->GetTime())
-      op->SetDirty(DIRTYFLAGS_DATA);
+        op->SetDirty(DIRTYFLAGS::DATA);
   }
 
   Bool ModifyObject(BaseObject* mod, BaseDocument* doc, BaseObject* op, const Matrix& op_mg,

@@ -1,9 +1,8 @@
-// Automatically generated with c4ddev v0.1.5
-#ifndef __aaOceanC4D_H_
-#define __aaOceanC4D_H_
+#ifndef __DaaOceanC4D_H_
+#define __DaaOceanC4D_H_
 enum
 {
-  DaaOceanC4D = 1039330,
+  DaaOceanC4D_Group = 1039330,
   AAOCEANC4D_RESOLUTION = 1000,
   AAOCEANC4D_SPECTRUM = 1001,
   AAOCEANC4D_SEED = 1002,
@@ -28,4 +27,4 @@ enum
   AAOCEANC4D_SWELL = 1021,
   AAOCEANC4D_INFOTEXT = 1022,
 };
-#endif // __aaOceanC4D_H_
+#endif // __DaaOceanC4D_H_

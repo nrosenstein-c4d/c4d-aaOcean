@@ -1,6 +1,6 @@
-STRINGTABLE aaOceanC4D
+STRINGTABLE DaaOceanC4D
 {
-  DaaOceanC4D "aaOcean";
+  DaaOceanC4D_Group "aaOcean";
   AAOCEANC4D_RESOLUTION "Resolution";
   AAOCEANC4D_SPECTRUM "Spectrum";
   AAOCEANC4D_SEED "Seed";

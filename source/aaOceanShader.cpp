@@ -1,6 +1,7 @@
 /**
  * Port of Amaan Akram's aaOcean suite for Cinema 4D.
  * Copyright (C) 2017  Niklas Rosenstein
+ * Copyright (C) 2020  Kent Barber
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,10 +17,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <c4d.h>
-#include <c4d_apibridge.h>
-#include <description/XaaOceanShader.h>
+#include "c4d.h"
+#include "XaaOceanShader.h"
 #include "aaOceanC4D.h"
+#include "DaaOceanC4D.h"
 #include "utils.h"
 
 
@@ -32,15 +33,15 @@ private:
 public: // ShaderData overrides
   INITRENDERRESULT InitRender(BaseShader* bs, InitRenderStruct const& irs) override
   {
-    if (!bs) return INITRENDERRESULT_UNKNOWNERROR;
+      if (!bs) return INITRENDERRESULT::UNKNOWNERROR;
     BaseContainer* bc = bs->GetDataInstance();
     if (!bc) {
-      return INITRENDERRESULT_UNKNOWNERROR;
+        return INITRENDERRESULT::UNKNOWNERROR;
     }
     Float time = (irs.doc ? irs.doc->GetTime().Get() : 0.0);
     _ocean.Init(*bc, time);
     _foam = bc->GetBool(AAOCEANC4D_FOAM);
-    return INITRENDERRESULT_OK;
+      return INITRENDERRESULT::OK;
   }
 
   void FreeRender(BaseShader* bs) override {

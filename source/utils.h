@@ -1,6 +1,7 @@
 /**
  * Port of Amaan Akram's aaOcean suite for Cinema 4D.
  * Copyright (C) 2017  Niklas Rosenstein
+ * Copyright (C) 2020  Kent Barber
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +18,7 @@
  */
 
 #pragma once
-#include <c4d.h>
+#include "c4d.h"
 
 namespace utils
 {
@@ -42,7 +43,7 @@ inline void InitContainerDefaults(BaseList2D* node)
 
   AutoAlloc<Description> desc;
   if (!desc) return;
-  node->GetDescription(desc, DESCFLAGS_DESC_0);
+    node->GetDescription(desc, DESCFLAGS_DESC::NONE);
   ForEachParameter(desc, [&](DescID const& id, BaseContainer const& bc) {
     if (!data->GetDataPointer(id[0].id)) {
       GeData const* dat = bc.GetDataPointer(DESC_DEFAULT);
